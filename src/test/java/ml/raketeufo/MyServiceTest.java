@@ -31,7 +31,7 @@ public class MyServiceTest {
         assertEquals(entity.getId(), found.getId());
         assertEquals(PAYLOAD, found.getPayload());
 
-        MyEntity foundB = myService.findById(entity.getId());
+        MyEntity foundB = myService.find(entity.getId());
         assertNotNull(foundB);
         assertEquals(entity.getId(), foundB.getId());
         assertEquals(PAYLOAD, foundB.getPayload());
