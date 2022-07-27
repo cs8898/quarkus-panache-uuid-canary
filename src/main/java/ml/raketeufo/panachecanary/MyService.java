@@ -22,4 +22,8 @@ public class MyService {
     public MyEntity findById(UUID id) {
         return myRepository.findById(id);
     }
+
+    public MyEntity find(UUID id) {
+        return myRepository.find("id", id).singleResult();
+    }
 }
