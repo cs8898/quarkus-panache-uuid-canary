@@ -2,9 +2,7 @@ package ml.raketeufo.panachecanary;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -16,6 +14,8 @@ public class MyEntity {
             name = "UUID",
             strategy = "org.hibernate.id.UUIDGenerator"
     )
+    //Hotfix Column Definition
+    @Column(columnDefinition = "uuid")
     private UUID id;
 
     private String payload;
