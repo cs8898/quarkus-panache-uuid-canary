@@ -16,6 +16,8 @@ public class MyEntity {
             name = "UUID",
             strategy = "org.hibernate.id.UUIDGenerator"
     )
+    //Hotfix Column Definition
+    @Column(columnDefinition = "uuid")
     private UUID id;
 
     private String payload;
